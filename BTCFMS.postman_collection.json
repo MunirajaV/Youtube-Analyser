@@ -1,0 +1,1990 @@
+{
+	"info": {
+		"_postman_id": "a8f33bfe-4db7-4c52-9f1d-7fad4b7e9c04",
+		"name": "BTCFMS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "7214050"
+	},
+	"item": [
+		{
+			"name": "Agreement",
+			"item": [
+				{
+					"name": "Store Agreement",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"networkType\": \"testnet\",\n  \"agreementType\": 0,\n  \"agreementNo\": \"M-2\",\n  \"clientName\": \"Ashok\",\n  \"partyName\": \"Sam\",\n  \"agreementDate\": 20241125,\n  \"expiryDate\": 20251125,\n  \"ipfsHash\": \"bafkreidhw5spwxlf7narnvyv5p57xfkiinxbwovpvhiou5o4wz6yx36x4e\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://btcfms-26e01092da26.herokuapp.com/api/agreement/create",
+							"protocol": "https",
+							"host": [
+								"btcfms-26e01092da26",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"agreement",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Agreement",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"networkType\": \"testnet\",\n  \"agreementNo\": \"M-2\",\n  \"clientName\": \"Example Client 1\",\n  \"partyName\": \"Example Party 1\",\n  \"agreementDate\": 20240903,\n  \"expiryDate\": 20240903,\n  \"ipfsHash\": \"bafkreielwv56hett6tj5xhyaielnt67wri46ujzisgvsa6u3fehca43lby\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://btcfms-26e01092da26.herokuapp.com/api/agreement/update",
+							"protocol": "https",
+							"host": [
+								"btcfms-26e01092da26",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"agreement",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cancel Agreement",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"networkType\": \"testnet\",\n  \"agreementNo\": \"1\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://btcfms-26e01092da26.herokuapp.com/api/agreement/cancel",
+							"protocol": "https",
+							"host": [
+								"btcfms-26e01092da26",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"agreement",
+								"cancel"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Agreement",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"networkType\": \"testnet\",\n  \"agreementNo\": \"1\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://btcfms-26e01092da26.herokuapp.com/api/agreement/get",
+							"protocol": "https",
+							"host": [
+								"btcfms-26e01092da26",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"agreement",
+								"get"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "IPFS",
+			"item": [
+				{
+					"name": "upload file to ipfs",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/C:/Users/Mazenet-Manoj/Downloads/image (3).png"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://btcfms-26e01092da26.herokuapp.com/api/ipfs/upload",
+							"protocol": "https",
+							"host": [
+								"btcfms-26e01092da26",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"ipfs",
+								"upload"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "wallet",
+			"item": [
+				{
+					"name": "country",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://www.btcgroup.ae/wallet/api/all-country",
+							"protocol": "https",
+							"host": [
+								"www",
+								"btcgroup",
+								"ae"
+							],
+							"path": [
+								"wallet",
+								"api",
+								"all-country"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "mobile_otp",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://www.btcgroup.ae/wallet/api/mobile-otp?country_id=1&mobile_no=8072709971&email=manojprabakaran@mazenetsolution.com&Name=Manoj",
+							"protocol": "https",
+							"host": [
+								"www",
+								"btcgroup",
+								"ae"
+							],
+							"path": [
+								"wallet",
+								"api",
+								"mobile-otp"
+							],
+							"query": [
+								{
+									"key": "country_id",
+									"value": "1"
+								},
+								{
+									"key": "mobile_no",
+									"value": "8072709971"
+								},
+								{
+									"key": "email",
+									"value": "manojprabakaran@mazenetsolution.com"
+								},
+								{
+									"key": "Name",
+									"value": "Manoj"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "resend_otp",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://www.btcgroup.ae/wallet/api/resend-otp?country_id=1&mobile_no=8072709974&email=&Name=Manoj",
+							"protocol": "https",
+							"host": [
+								"www",
+								"btcgroup",
+								"ae"
+							],
+							"path": [
+								"wallet",
+								"api",
+								"resend-otp"
+							],
+							"query": [
+								{
+									"key": "country_id",
+									"value": "1"
+								},
+								{
+									"key": "mobile_no",
+									"value": "8072709974"
+								},
+								{
+									"key": "email",
+									"value": ""
+								},
+								{
+									"key": "Name",
+									"value": "Manoj"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://www.btcgroup.ae/wallet/api/submit-user?country_id=99&mobile_no=7418470183&password=12345678&mobile_verified=1&email_id=manojprabakaranofficial-mazenet-2@gmail.com&email_verified=1&name=Manoj&verify_id=1&ip_address=1.1.1.1&device_id=manoj-98765&fcm_token=ABCD1234",
+							"protocol": "https",
+							"host": [
+								"www",
+								"btcgroup",
+								"ae"
+							],
+							"path": [
+								"wallet",
+								"api",
+								"submit-user"
+							],
+							"query": [
+								{
+									"key": "country_id",
+									"value": "99"
+								},
+								{
+									"key": "mobile_no",
+									"value": "7418470183"
+								},
+								{
+									"key": "password",
+									"value": "12345678"
+								},
+								{
+									"key": "mobile_verified",
+									"value": "1"
+								},
+								{
+									"key": "email_id",
+									"value": "manojprabakaranofficial-mazenet-2@gmail.com"
+								},
+								{
+									"key": "email_verified",
+									"value": "1"
+								},
+								{
+									"key": "name",
+									"value": "Manoj"
+								},
+								{
+									"key": "verify_id",
+									"value": "1"
+								},
+								{
+									"key": "ip_address",
+									"value": "1.1.1.1"
+								},
+								{
+									"key": "device_id",
+									"value": "manoj-98765"
+								},
+								{
+									"key": "fcm_token",
+									"value": "ABCD1234"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "mobile_login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://www.btcgroup.ae/wallet/api/mobile-login?mobile_no=9965466584&password=12345678&country_id=1",
+							"protocol": "https",
+							"host": [
+								"www",
+								"btcgroup",
+								"ae"
+							],
+							"path": [
+								"wallet",
+								"api",
+								"mobile-login"
+							],
+							"query": [
+								{
+									"key": "mobile_no",
+									"value": "9965466584"
+								},
+								{
+									"key": "password",
+									"value": "12345678"
+								},
+								{
+									"key": "country_id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "set-local-currency",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "user_id",
+									"value": "1029"
+								},
+								{
+									"key": "currency_id",
+									"value": "22"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://www.btcgroup.ae/wallet/api/set-local-currency",
+							"protocol": "https",
+							"host": [
+								"www",
+								"btcgroup",
+								"ae"
+							],
+							"path": [
+								"wallet",
+								"api",
+								"set-local-currency"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-crypto-price",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://www.btcgroup.ae/wallet/api/get-crypto-price?user_id=",
+							"protocol": "http",
+							"host": [
+								"www",
+								"btcgroup",
+								"ae"
+							],
+							"path": [
+								"wallet",
+								"api",
+								"get-crypto-price"
+							],
+							"query": [
+								{
+									"key": "user_id",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "other-user-details",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://www.btcgroup.ae/wallet/api/get-other-user-details?from_user_id=1029&to_user_id=9790030020&token_name=GDX&amount=10",
+							"protocol": "https",
+							"host": [
+								"www",
+								"btcgroup",
+								"ae"
+							],
+							"path": [
+								"wallet",
+								"api",
+								"get-other-user-details"
+							],
+							"query": [
+								{
+									"key": "from_user_id",
+									"value": "1029"
+								},
+								{
+									"key": "to_user_id",
+									"value": "9790030020"
+								},
+								{
+									"key": "token_name",
+									"value": "GDX"
+								},
+								{
+									"key": "amount",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "send-gdx",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://www.btcgroup.ae/wallet/api/send-gdx?from_user_id=1029&to_user_id=56&token_name=GDX&gdx_amt=10&is_q=1",
+							"protocol": "https",
+							"host": [
+								"www",
+								"btcgroup",
+								"ae"
+							],
+							"path": [
+								"wallet",
+								"api",
+								"send-gdx"
+							],
+							"query": [
+								{
+									"key": "from_user_id",
+									"value": "1029"
+								},
+								{
+									"key": "to_user_id",
+									"value": "56"
+								},
+								{
+									"key": "token_name",
+									"value": "GDX"
+								},
+								{
+									"key": "gdx_amt",
+									"value": "10"
+								},
+								{
+									"key": "is_q",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "token-balance",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://btcfms-26e01092da26.herokuapp.com/api/token/balance?address=0xf34162Be8C0510D19944c6ab296Dd8F7DB244A9e&networkType=testnet",
+							"protocol": "https",
+							"host": [
+								"btcfms-26e01092da26",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"token",
+								"balance"
+							],
+							"query": [
+								{
+									"key": "address",
+									"value": "0xf34162Be8C0510D19944c6ab296Dd8F7DB244A9e"
+								},
+								{
+									"key": "networkType",
+									"value": "testnet"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "send-eth",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://www.btcgroup.ae/wallet/api/send-eth?from_user_id=1029&to_user_id=56&token_name=ETH&eth_amt=0.01&is_q=1",
+							"protocol": "https",
+							"host": [
+								"www",
+								"btcgroup",
+								"ae"
+							],
+							"path": [
+								"wallet",
+								"api",
+								"send-eth"
+							],
+							"query": [
+								{
+									"key": "from_user_id",
+									"value": "1029"
+								},
+								{
+									"key": "to_user_id",
+									"value": "56"
+								},
+								{
+									"key": "token_name",
+									"value": "ETH"
+								},
+								{
+									"key": "eth_amt",
+									"value": "0.01"
+								},
+								{
+									"key": "is_q",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "transaction-details",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://www.btcgroup.ae/wallet/api/transaction-details?user_id=1044",
+							"protocol": "https",
+							"host": [
+								"www",
+								"btcgroup",
+								"ae"
+							],
+							"path": [
+								"wallet",
+								"api",
+								"transaction-details"
+							],
+							"query": [
+								{
+									"key": "user_id",
+									"value": "1044"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "crypto-rates-chart",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://www.btcgroup.ae/wallet/api/crypto-rates-charts?crypto_name=btc&user_id=1029",
+							"protocol": "https",
+							"host": [
+								"www",
+								"btcgroup",
+								"ae"
+							],
+							"path": [
+								"wallet",
+								"api",
+								"crypto-rates-charts"
+							],
+							"query": [
+								{
+									"key": "crypto_name",
+									"value": "btc"
+								},
+								{
+									"key": "user_id",
+									"value": "1029"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "profile photo",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://www.btcgroup.ae/wallet/api/show-prof-photo?user_id=1029",
+							"protocol": "http",
+							"host": [
+								"www",
+								"btcgroup",
+								"ae"
+							],
+							"path": [
+								"wallet",
+								"api",
+								"show-prof-photo"
+							],
+							"query": [
+								{
+									"key": "user_id",
+									"value": "1029"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "usd-rates-new",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://www.btcgroup.ae/wallet/api/current-usd-rates-new?user_id=1029",
+							"protocol": "https",
+							"host": [
+								"www",
+								"btcgroup",
+								"ae"
+							],
+							"path": [
+								"wallet",
+								"api",
+								"current-usd-rates-new"
+							],
+							"query": [
+								{
+									"key": "user_id",
+									"value": "1029"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "usd-rates-new",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://www.btcgroup.ae/wallet/api/current-usd-rates-new?user_id=1029",
+							"protocol": "https",
+							"host": [
+								"www",
+								"btcgroup",
+								"ae"
+							],
+							"path": [
+								"wallet",
+								"api",
+								"current-usd-rates-new"
+							],
+							"query": [
+								{
+									"key": "user_id",
+									"value": "1029"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update-usd-rates",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://www.btcgroup.ae/wallet/api/update-usd-rates",
+							"protocol": "https",
+							"host": [
+								"www",
+								"btcgroup",
+								"ae"
+							],
+							"path": [
+								"wallet",
+								"api",
+								"update-usd-rates"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "crypro-charts-new",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://www.btcgroup.ae/wallet/api/crypto-rates-charts-new?crypto_name=btc&limit=24h&user_id=1029",
+							"protocol": "https",
+							"host": [
+								"www",
+								"btcgroup",
+								"ae"
+							],
+							"path": [
+								"wallet",
+								"api",
+								"crypto-rates-charts-new"
+							],
+							"query": [
+								{
+									"key": "crypto_name",
+									"value": "btc"
+								},
+								{
+									"key": "limit",
+									"value": "24h"
+								},
+								{
+									"key": "user_id",
+									"value": "1029"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "history-crypto-rates-new",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://www.btcgroup.ae/wallet/api/history-crypto-rates-new",
+							"protocol": "https",
+							"host": [
+								"www",
+								"btcgroup",
+								"ae"
+							],
+							"path": [
+								"wallet",
+								"api",
+								"history-crypto-rates-new"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "send-gdx-new",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://www.btcgroup.ae/wallet/api/send-gdx-new?from_user_id=1041&to_user_addr_mobile_email=0x1924EEA37E6e5C74bfF17464B5a7e4ff096f8412&token_name=GDX&gdxAmt=100&is_q=1",
+							"protocol": "https",
+							"host": [
+								"www",
+								"btcgroup",
+								"ae"
+							],
+							"path": [
+								"wallet",
+								"api",
+								"send-gdx-new"
+							],
+							"query": [
+								{
+									"key": "from_user_id",
+									"value": "1041"
+								},
+								{
+									"key": "to_user_addr_mobile_email",
+									"value": "0x1924EEA37E6e5C74bfF17464B5a7e4ff096f8412"
+								},
+								{
+									"key": "token_name",
+									"value": "GDX"
+								},
+								{
+									"key": "gdxAmt",
+									"value": "100"
+								},
+								{
+									"key": "is_q",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "send-eth-new",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://www.btcgroup.ae/wallet/api/send-eth-new?from_user_id=1029&to_user_addr_mobile_email=0x359AF60e234544062b846b934b58e631A4480321&token_name=ETH&eth_amt=0.001&is_q=1",
+							"protocol": "https",
+							"host": [
+								"www",
+								"btcgroup",
+								"ae"
+							],
+							"path": [
+								"wallet",
+								"api",
+								"send-eth-new"
+							],
+							"query": [
+								{
+									"key": "from_user_id",
+									"value": "1029"
+								},
+								{
+									"key": "to_user_addr_mobile_email",
+									"value": "0x359AF60e234544062b846b934b58e631A4480321"
+								},
+								{
+									"key": "token_name",
+									"value": "ETH"
+								},
+								{
+									"key": "eth_amt",
+									"value": "0.001"
+								},
+								{
+									"key": "is_q",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://www.btcgroup.ae/wallet/api/gdx-chart?user_id=1029",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://www.btcgroup.ae/wallet/api/gdx-chart?user_id=1029",
+							"protocol": "https",
+							"host": [
+								"www",
+								"btcgroup",
+								"ae"
+							],
+							"path": [
+								"wallet",
+								"api",
+								"gdx-chart"
+							],
+							"query": [
+								{
+									"key": "user_id",
+									"value": "1029"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://www.btcgroup.ae/wallet/api/gdx-chart?user_id=1029&crypto_name=gdx&limit=24h",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://www.btcgroup.ae/wallet/api/gdx-chart?user_id=1029&crypto_name=gdx&limit=24h",
+							"protocol": "https",
+							"host": [
+								"www",
+								"btcgroup",
+								"ae"
+							],
+							"path": [
+								"wallet",
+								"api",
+								"gdx-chart"
+							],
+							"query": [
+								{
+									"key": "user_id",
+									"value": "1029"
+								},
+								{
+									"key": "crypto_name",
+									"value": "gdx"
+								},
+								{
+									"key": "limit",
+									"value": "24h"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://www.btcgroup.ae/wallet/api/get-mnemonic?user_id=1043&password=12345678",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://www.btcgroup.ae/wallet/api/get-mnemonic?user_id=1043&password=12345678",
+							"protocol": "https",
+							"host": [
+								"www",
+								"btcgroup",
+								"ae"
+							],
+							"path": [
+								"wallet",
+								"api",
+								"get-mnemonic"
+							],
+							"query": [
+								{
+									"key": "user_id",
+									"value": "1043"
+								},
+								{
+									"key": "password",
+									"value": "12345678"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Camp",
+			"item": [
+				{
+					"name": "Sign-up",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://www.btcgroup.ae/admin/api/mobile_store_customer?name=Manoj&email=manojprabakaranofficial@gmail.com&mobile_no=7418470181",
+							"protocol": "https",
+							"host": [
+								"www",
+								"btcgroup",
+								"ae"
+							],
+							"path": [
+								"admin",
+								"api",
+								"mobile_store_customer"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Manoj"
+								},
+								{
+									"key": "email",
+									"value": "manojprabakaranofficial@gmail.com"
+								},
+								{
+									"key": "mobile_no",
+									"value": "7418470181"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Email-OTP-Verify",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://www.btcgroup.ae/admin/api/mobile_verified_email?customer_id=16&otp=1111",
+							"protocol": "https",
+							"host": [
+								"www",
+								"btcgroup",
+								"ae"
+							],
+							"path": [
+								"admin",
+								"api",
+								"mobile_verified_email"
+							],
+							"query": [
+								{
+									"key": "customer_id",
+									"value": "16"
+								},
+								{
+									"key": "otp",
+									"value": "1111"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Mobileno-OTP-Verify",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://www.btcgroup.ae/admin/api/mobile_verified_mobile_no_otp?customer_id=16&otp=1111",
+							"protocol": "https",
+							"host": [
+								"www",
+								"btcgroup",
+								"ae"
+							],
+							"path": [
+								"admin",
+								"api",
+								"mobile_verified_mobile_no_otp"
+							],
+							"query": [
+								{
+									"key": "customer_id",
+									"value": "16"
+								},
+								{
+									"key": "otp",
+									"value": "1111"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Set-Password",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://www.btcgroup.ae/admin/api/mobile_save_password?password=12345678&customer_id=16",
+							"protocol": "https",
+							"host": [
+								"www",
+								"btcgroup",
+								"ae"
+							],
+							"path": [
+								"admin",
+								"api",
+								"mobile_save_password"
+							],
+							"query": [
+								{
+									"key": "password",
+									"value": "12345678"
+								},
+								{
+									"key": "customer_id",
+									"value": "16"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://www.btcgroup.ae/admin/api/mobile_login?password=12345678&email=manojprabakaranofficial@gmail.com",
+							"protocol": "https",
+							"host": [
+								"www",
+								"btcgroup",
+								"ae"
+							],
+							"path": [
+								"admin",
+								"api",
+								"mobile_login"
+							],
+							"query": [
+								{
+									"key": "password",
+									"value": "12345678"
+								},
+								{
+									"key": "email",
+									"value": "manojprabakaranofficial@gmail.com"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "kyc-store",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "kyc_front",
+									"type": "file",
+									"src": "/C:/Users/Mazenet-Manoj/Downloads/sa_promoters (1).png"
+								},
+								{
+									"key": "kyc_back",
+									"type": "file",
+									"src": "/C:/Users/Mazenet-Manoj/Downloads/Alpha-BTC-logo1 (1).png"
+								},
+								{
+									"key": "user_id",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://www.btcgroup.ae/admin/api/mobile-kyc-store",
+							"protocol": "https",
+							"host": [
+								"www",
+								"btcgroup",
+								"ae"
+							],
+							"path": [
+								"admin",
+								"api",
+								"mobile-kyc-store"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Dashboard-Details",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://www.btcgroup.ae/admin/api/dashboard_details?customer_id=39",
+							"protocol": "https",
+							"host": [
+								"www",
+								"btcgroup",
+								"ae"
+							],
+							"path": [
+								"admin",
+								"api",
+								"dashboard_details"
+							],
+							"query": [
+								{
+									"key": "customer_id",
+									"value": "39"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "transaction-details",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://www.btcgroup.ae/admin/api/transaction_details?agreement_no=1",
+							"protocol": "https",
+							"host": [
+								"www",
+								"btcgroup",
+								"ae"
+							],
+							"path": [
+								"admin",
+								"api",
+								"transaction_details"
+							],
+							"query": [
+								{
+									"key": "agreement_no",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Resident-Details",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://www.btcgroup.ae/admin/api/resident_details?agreement_no=1",
+							"protocol": "https",
+							"host": [
+								"www",
+								"btcgroup",
+								"ae"
+							],
+							"path": [
+								"admin",
+								"api",
+								"resident_details"
+							],
+							"query": [
+								{
+									"key": "agreement_no",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Payment-Details",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://www.btcgroup.ae/admin/api/payment_details?agreement_no=45",
+							"protocol": "https",
+							"host": [
+								"www",
+								"btcgroup",
+								"ae"
+							],
+							"path": [
+								"admin",
+								"api",
+								"payment_details"
+							],
+							"query": [
+								{
+									"key": "agreement_no",
+									"value": "45"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-locations",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://www.btcgroup.ae/admin/api/get-locations",
+							"protocol": "https",
+							"host": [
+								"www",
+								"btcgroup",
+								"ae"
+							],
+							"path": [
+								"admin",
+								"api",
+								"get-locations"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-rooms",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://www.btcgroup.ae/admin/api/get-building-images?building_id=1",
+							"protocol": "https",
+							"host": [
+								"www",
+								"btcgroup",
+								"ae"
+							],
+							"path": [
+								"admin",
+								"api",
+								"get-building-images"
+							],
+							"query": [
+								{
+									"key": "building_id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "room-booking-documents",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "location_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "building_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "user_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "license_front",
+									"type": "file",
+									"src": []
+								},
+								{
+									"key": "license_back",
+									"type": "file",
+									"src": []
+								},
+								{
+									"key": "passport_front",
+									"type": "file",
+									"src": []
+								},
+								{
+									"key": "passport_back",
+									"type": "file",
+									"src": []
+								},
+								{
+									"key": "emirates_front",
+									"type": "file",
+									"src": []
+								},
+								{
+									"key": "emirates_back",
+									"type": "file",
+									"src": []
+								},
+								{
+									"key": "others_front",
+									"type": "file",
+									"src": []
+								},
+								{
+									"key": "others_back",
+									"type": "file",
+									"src": []
+								},
+								{
+									"key": "room_details[0][room_id]",
+									"value": "2",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "room_details[0][quantity]",
+									"value": "1",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "room_details",
+									"value": "[{\"room_id\":\"25\",\"quantity\":\"1\"},{\"room_id\":\"21\",\"quantity\":\"1\"},{\"room_id\":\"16\",\"quantity\":\"1\"}]",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://www.btcgroup.ae/admin/api/mobile-create-room-booking",
+							"protocol": "https",
+							"host": [
+								"www",
+								"btcgroup",
+								"ae"
+							],
+							"path": [
+								"admin",
+								"api",
+								"mobile-create-room-booking"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "room-booking",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n            \"location_id\": \"Dubai\",\r\n            \"building_id\": \"1\",\r\n            \"user_id\": \"1\",\r\n            \"enquiry_id\": \"18\",\r\n            \"room_details\": [\r\n                {\r\n                    \"room_id\": \"1\",\r\n                    \"quantity\": \"1\"\r\n                },\r\n                {\r\n                    \"room_id\": \"2\",\r\n                    \"quantity\": \"4\"\r\n                },\r\n                {\r\n                    \"room_id\": \"3\",\r\n                    \"quantity\": \"0\"\r\n                }\r\n            ]\r\n        }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://www.btcgroup.ae/admin/api/mobile-create-room-booking-add",
+							"protocol": "https",
+							"host": [
+								"www",
+								"btcgroup",
+								"ae"
+							],
+							"path": [
+								"admin",
+								"api",
+								"mobile-create-room-booking-add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "cost-finalise",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://www.btcgroup.ae/admin/api/get-cost-finalization?enquiry_id=38",
+							"protocol": "https",
+							"host": [
+								"www",
+								"btcgroup",
+								"ae"
+							],
+							"path": [
+								"admin",
+								"api",
+								"get-cost-finalization"
+							],
+							"query": [
+								{
+									"key": "enquiry_id",
+									"value": "38"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "enquiry-status",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://www.btcgroup.ae/admin/api/get-enquiry-status?user_id=13",
+							"protocol": "https",
+							"host": [
+								"www",
+								"btcgroup",
+								"ae"
+							],
+							"path": [
+								"admin",
+								"api",
+								"get-enquiry-status"
+							],
+							"query": [
+								{
+									"key": "user_id",
+									"value": "13"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-payment-acceptance",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://www.btcgroup.ae/admin/api/get-cost-finalization?enquiry_id=31",
+							"protocol": "https",
+							"host": [
+								"www",
+								"btcgroup",
+								"ae"
+							],
+							"path": [
+								"admin",
+								"api",
+								"get-cost-finalization"
+							],
+							"query": [
+								{
+									"key": "enquiry_id",
+									"value": "31"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "acceptance",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://www.btcgroup.ae/admin/api/mobile-acceptance?enquiry_id=31&acceptance_status=2",
+							"protocol": "https",
+							"host": [
+								"www",
+								"btcgroup",
+								"ae"
+							],
+							"path": [
+								"admin",
+								"api",
+								"mobile-acceptance"
+							],
+							"query": [
+								{
+									"key": "enquiry_id",
+									"value": "31"
+								},
+								{
+									"key": "acceptance_status",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "due-details",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://www.btcgroup.ae/admin/api/payment-due-details?agreement_no=45",
+							"protocol": "https",
+							"host": [
+								"www",
+								"btcgroup",
+								"ae"
+							],
+							"path": [
+								"admin",
+								"api",
+								"payment-due-details"
+							],
+							"query": [
+								{
+									"key": "agreement_no",
+									"value": "45"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add-payment",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n            \"agreement_no\": \"47\",\r\n            \"user_id\": \"35\",\r\n            \"total_paid_amount\": \"10\",\r\n            \"due_details\": [\r\n                {\r\n                    \"due_no\": \"1\",\r\n                    \"amount\": \"10\"\r\n                },\r\n                {\r\n                    \"due_no\": \"2\",\r\n                    \"amount\": \"0\"\r\n                }\r\n            ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://www.btcgroup.ae/admin/api/add-token-payment",
+							"protocol": "https",
+							"host": [
+								"www",
+								"btcgroup",
+								"ae"
+							],
+							"path": [
+								"admin",
+								"api",
+								"add-token-payment"
+							],
+							"query": [
+								{
+									"key": "agreement_no",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "due_no",
+									"value": "2",
+									"disabled": true
+								},
+								{
+									"key": "receipt_date",
+									"value": "2024-12-19",
+									"disabled": true
+								},
+								{
+									"key": "paid_amount",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "mode",
+									"value": "abtc",
+									"disabled": true
+								},
+								{
+									"key": "user_id",
+									"value": "18",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "forget-password",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://www.btcgroup.ae/admin/api/forget-password?email=ashwinkumar@gmail.com",
+							"protocol": "https",
+							"host": [
+								"www",
+								"btcgroup",
+								"ae"
+							],
+							"path": [
+								"admin",
+								"api",
+								"forget-password"
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": "ashwinkumar@gmail.com"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "create Account",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"type\": \"polygon\",\n    \"networkType\": \"amoy\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://btcfms-159cfad79d1f.herokuapp.com/api/blockchain/create",
+					"protocol": "https",
+					"host": [
+						"btcfms-159cfad79d1f",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"blockchain",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Import Wallet",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"type\": \"polygon\",\n  \"networkType\": \"amoy\",\n  \"privateKeyOrMnemonic\": \"ethics comfort best bread follow romance adjust tourist kind thunder truck melt\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://13.41.229.120:3000/api/blockchain/import",
+					"protocol": "http",
+					"host": [
+						"13",
+						"41",
+						"229",
+						"120"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"blockchain",
+						"import"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Balance",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"type\": \"polygon\",\n  \"networkType\": \"amoy\",\n  \"address\": \"0x43C7c357116E4AFb40E31e4f35468164894cDef6\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://btcfms-159cfad79d1f.herokuapp.com/api/blockchain/balance",
+					"protocol": "https",
+					"host": [
+						"btcfms-159cfad79d1f",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"blockchain",
+						"balance"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getToken Balance",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"networkType\": \"testnet\",\n  \"address\": \"0xf34162Be8C0510D19944c6ab296Dd8F7DB244A9e\",\n  \"tokenType\": \"btcfms\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://btcfms-159cfad79d1f.herokuapp.com/api/token/balance",
+					"protocol": "https",
+					"host": [
+						"btcfms-159cfad79d1f",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"token",
+						"balance"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "sendTransaction",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"type\": \"polygon\",\n  \"fromAddress\": \"0xf34162Be8C0510D19944c6ab296Dd8F7DB244A9e\",\n  \"privateKey\":\"0x9ed744bc7516f93581a54e9fa98cdad9f807ea22943df000620f19f51d8d7d1a\",\n  \"toAddress\":\"0x2a8B0Eb779E7337B7334E0D4C580B396EcD169A1\",\n  \"amount\": 0.009,\n  \"networkType\": \"amoy\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://btcfms-159cfad79d1f.herokuapp.com/api/blockchain/send-transaction",
+					"protocol": "https",
+					"host": [
+						"btcfms-159cfad79d1f",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"blockchain",
+						"send-transaction"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "transfer Token",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"type\": \"\",\n  \"fromAddress\": \"0x2a8B0Eb779E7337B7334E0D4C580B396EcD169A1\",\n  \"privateKey\":\"0x2c466f37760732bc1bea33c8abc2379806395692581f4fe7b4904ababeb68033\",\n  \"toAddress\":\"0x1924EEA37E6e5C74bfF17464B5a7e4ff096f8412\",\n  \"amount\": 100,\n  \"networkType\": \"testnet\",\n  \"tokenType\": \"btcfms\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://btcfms-159cfad79d1f.herokuapp.com/api/token/transfer",
+					"protocol": "https",
+					"host": [
+						"btcfms-159cfad79d1f",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"token",
+						"transfer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Transaction",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"type\": \"ethereum\",\n  \"hash\": \"0x8641fd96106083134f57b8867362fdfe1a562bdb0e50dca1d6a7fe85f1e87841\",\n  \"networkType\": \"sepolia\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://13.41.229.120:3000/api/blockchain/transaction-details",
+					"protocol": "http",
+					"host": [
+						"13",
+						"41",
+						"229",
+						"120"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"blockchain",
+						"transaction-details"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
